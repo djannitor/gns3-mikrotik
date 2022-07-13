@@ -1,6 +1,6 @@
 # gns3-mikrotik
 
-Deploying the MikroTik Cloud Hosted Router image in GNS3.
+Deploying the MikroTik Cloud Hosted Router image in GNS3 on Windows 10 with VirtualBox.
 
 ## Installation of pre-requisites
 
@@ -99,3 +99,43 @@ ip address add address=10.10.10.1/24 interface=ether3
 ```
 
 Add a second MikroTik CHR into the topology, start and assign an IP address, then confirm that the routers can ping each other.
+
+## Integrating GNS3 with Microsoft Windows Terminal
+
+The GNS3 All-in-one installer from GitHub doesn't include the Solar-PuTTY tabbed PuTTY client that's included in the installer from
+
+https://www.gns3.com/software/download
+
+and I didn't want to register my email address with SolarWinds.
+
+Because it's convenient to have a tabbed terminal client, a free option in Windows 10 is the Electron-based Microsoft Windows Terminal, which is available from the Microsoft Store or from GitHub:
+
+https://github.com/microsoft/terminal
+
+The GitHub version doesn't auto-update, while the Microsoft Store version does.
+
+Once you've installed Microsoft Windows Terminal, launch a Terminal window and right-click the title bar to access the "Settings" menu.
+
+Click "Profiles > Defaults" from the left-hand navigation, then "Additional settings > Advanced" from the main window.
+
+Turn on the first option "Suppress title changes" and click "Save". This will allow you to set the title of the Terminal tab to the name of the network device in GNS3.
+
+Windows 10 doesn't support telnet by default, so you'll need to enable it by clicking the Windows Start Menu and typing "telnet". Click "Turn Windows features on or off" and enable the "Telnet Client".
+
+In GNS3, go to "Edit > Preferences" and click the "Console applicatons" tab under "General preferences".
+
+Make a backup copy of the default setting:
+
+```
+putty_standalone.exe -telnet %h %p -loghost "%d"
+```
+
+Click the "Edit" button and replace the default with:
+
+```
+wt -w 1 new-tab --title %d PowerShell telnet %h %p
+```
+
+Then click "OK".
+
+It may be a bug or a feature in Terminal, but the GNS3 Console windows will require you to press the "Enter/Return" key to display the device's login prompt.
