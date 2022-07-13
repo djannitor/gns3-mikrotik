@@ -147,3 +147,7 @@ Then click "OK".
 The above will open consoles as tabs in a new Windows Terminal instance "1", while an already running Windows Terminal window is instance "0".
 
 You may need to press the "Enter/Return" key to display the device's login prompt.
+
+## References
+
+[Download and install GNS3 Virtualbox and MikroTik CHR image version 7 - YouTube -  MAICT Consult](https://www.youtube.com/watch?v=-0N8unW5ZC4)
