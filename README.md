@@ -60,6 +60,8 @@ By default, there will only be a single Network Adapter attached in NAT mode. Th
 
 Click the "Adapter 2" tab and click "Enable Network Adapter" as "Not attached" and click "OK". Add additional adapters if desired.
 
+> The above step of defining multiple network adapters in VirtualBox might not be necessary?
+
 Start the MikroTik CHR VM and login as "admin" with no password.
 
 You can confirm the NAT connectivity to the Internet with "ping 8.8.8.8".
