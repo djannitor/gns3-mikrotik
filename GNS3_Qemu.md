@@ -10,7 +10,7 @@ Skip to "Re-do with GNS3 Local Qemu" after downloading the pre-requisite MikroTi
 
 ## Pre-requisites
 
-This document assumes you've already downloaded and installed GNS3.
+This document assumes you've already downloaded and installed GNS3 and you've deployed the GNS3 VM.
 
 To download the MikroTik image, go to
 
