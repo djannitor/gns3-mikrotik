@@ -2,7 +2,7 @@
 
 Deploying the MikroTik Cloud Hosted Router image in GNS3 Qemu on Windows 10.
 
-While [GNS3 recommends using the GNS3 VM on Windows and Mac OS](https://docs.gns3.com/docs/emulators/which-emulators-should-i-use), that didn't work for the MikroTik CHR on my host PC (Intel Core i5-3570).
+While [GNS3 recommends using the GNS3 VM on Windows and Mac OS](https://docs.gns3.com/docs/emulators/which-emulators-should-i-use), that didn't work for the MikroTik CHR on my host PC (Intel Core i5-3570), possibly because I'm using VirtualBox rather than VMware.
 
 The GNS3 documentation does recommend using Qemu for creating and using Cisco GNS3 topologies.
 
