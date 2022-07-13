@@ -90,7 +90,7 @@ Create a new project in GNS3 and add the MikroTik CHR.
 
 Start the router and connect to the console.
 
-Use the `interface print` command to show the interface names as they may not be "ether1" and "ether2".
+Use the `interface/print` command to show the interface names as they may not be "ether1" and "ether2".
 
 Add an IP address using the following syntax:
 
@@ -99,6 +99,12 @@ ip address add address=10.10.10.1/24 interface=ether3
 ```
 
 Add a second MikroTik CHR into the topology, start and assign an IP address, then confirm that the routers can ping each other.
+
+Save the router configuration with:
+
+```
+system/backup/save
+```
 
 ## Integrating GNS3 with Microsoft Windows Terminal
 
@@ -138,4 +144,6 @@ wt -w 1 new-tab --title %d PowerShell telnet %h %p
 
 Then click "OK".
 
-It may be a bug or a feature in Terminal, but the GNS3 Console windows will require you to press the "Enter/Return" key to display the device's login prompt.
+The above will open consoles as tabs in a new Windows Terminal instance "1", while an already running Windows Terminal window is instance "0".
+
+You may need to press the "Enter/Return" key to display the device's login prompt.
