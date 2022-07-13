@@ -2,7 +2,9 @@
 
 Deploying the MikroTik Cloud Hosted Router image in GNS3 Qemu on Windows 10.
 
-While [GNS3 recommends using the GNS3 VM on Windows and Mac OS](https://docs.gns3.com/docs/emulators/which-emulators-should-i-use), that didn't work for the MikroTik CHR on my host PC (Intel Core i5-3570), possibly because I'm using VirtualBox rather than VMware.
+While [GNS3 recommends using the GNS3 VM on Windows and Mac OS](https://docs.gns3.com/docs/emulators/which-emulators-should-i-use), that didn't work for the MikroTik CHR on my host PC (Intel Core i5-3570) using VirtualBox 6.1.34.
+
+> Follow up: After uninstalling VirtualBox and re-deploying the GNS3 VM in VMware Workstation Player 16, I was able to successfully run the MikroTik CHR in the GNS3 VM.
 
 The GNS3 documentation does recommend using Qemu for creating and using Cisco GNS3 topologies.
 
@@ -51,6 +53,8 @@ Create a new project in GNS3 and add the MikroTik CHR Qemu VM.
 Start the router and connect to the console.
 
 While GNS3 indicates a green status for the MikroTik Qemu router, there's no response on the console and GNS3 Servers Summary shows the GNS3 VM's single CPU pegged at 100%. Re-configuring the GNS3 VM to use two CPU cores resulted in the CPU utilization pegged at 50% and a non-responsive console.
+
+> Follow up: After uninstalling VirtualBox and re-deploying the GNS3 VM in VMware Workstation Player 16, I was able to successfully run the MikroTik CHR in the GNS3 VM.
 
 ## Re-do with GNS3 Local Qemu
 
