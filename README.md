@@ -151,3 +151,5 @@ You may need to press the "Enter/Return" key to display the device's login promp
 ## References
 
 [Download and install GNS3 Virtualbox and MikroTik CHR image version 7 - YouTube -  MAICT Consult](https://www.youtube.com/watch?v=-0N8unW5ZC4)
+
+[Using command line arguments for Windows Terminal - docs.microsoft.com](https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows)
